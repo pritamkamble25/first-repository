@@ -1,0 +1,39 @@
+<template>
+    <!-- example of simple data// primitive data  -->
+    <lightning-card title="parent component">
+        <c-p2c-alert-comp
+        massage="pritam"
+        number=26
+        is-visibel
+        card-title="child component title from parent"
+        ></c-p2c-alert-comp>
+    </lightning-card>
+    <br>
+    <!-- example of complex data // non primitive data (array object [{}])-->
+    <lightning-card title="carousel parent to child array object non primetive">
+        <div class="slds-var-m-around_medium">
+            <c-p2c-carousel-comp carouse-data={nonprimitivepassP2C} ></c-p2c-carousel-comp>
+        </div>
+    </lightning-card>
+    <br>
+    <!-- example of data passing on action -->
+    <lightning-card title="parent child communication on action perform">
+        <div class="slds-var-m-around_medium">
+            <lightning-input 
+            type="number" 
+            label="Enter percent"
+            value={percentage}
+            onkeyup={handler}></lightning-input> 
+            <c-p2c-progress-component
+            percent={percentage}
+            ></c-p2c-progress-component>         
+        </div>
+    </lightning-card>
+<!-- Example calling child method from parent -->
+    <lightning-card title="calling child method from parent using this.template.querySelector('call child').method name()">
+        <div class="slds-var-m-around_medium">
+            <lightning-button variant="based" label="call child method" onclick={methodcall}></lightning-button>
+            <c-p2c-slider-comp></c-p2c-slider-comp>
+        </div>
+    </lightning-card>      
+</template>

@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="mountin phase of Life cycle Hook parent card">
+        <div class="slds-var-m-around_medium">
+           
+            <template if:false={isVisible}>
+                <lightning-button 
+            variant="brand" 
+            label="show child" 
+            onclick={clickme} 
+            title="show child"
+            class="slds-m-left_x-small"></lightning-button>
+            </template>
+           
+            <template if:true={isVisible}>
+                <lightning-button 
+            variant="success" 
+            label="remove child" 
+            onclick={clickme} 
+            title="show child"
+            class="slds-m-left_x-small"></lightning-button>
+            </template>
+            
+            <template if:true={isVisible}>
+                <c-mounting-phase-child></c-mounting-phase-child>
+            </template>
+            
+           
+        </div>
+    </lightning-card>
+</template>

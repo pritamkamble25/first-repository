@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="message" type="String"/>
+    <aura:attribute name="ageyear" type="String"/>
+    <lightning:card title="Aura to Lwc communication">
+        <div class="slds-p-around_medium"> 
+            <h1>{!v.message}</h1>
+            <h3>{!v.ageyear}</h3>
+        </div>
+
+        <div class="slds-p-around_medium">
+            <c:lwcAuraComponent onsendmsg="{!c.handleMsg}" namepk="pritam kamble"></c:lwcAuraComponent>
+        </div>
+    </lightning:card>
+</aura:component>	
+

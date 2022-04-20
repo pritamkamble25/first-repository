@@ -1,0 +1,18 @@
+<template>
+    <!-- <lightning-card title="im parent component">
+        <div class="slds-var-m-around_medium">
+            <h1>hello from parent</h1>
+        <c-hello-child></c-hello-child>
+        </div>
+    </lightning-card> -->
+    <lightning-card title="query selector LWC-Quiz">
+        <div class="slds-var-m-around_medium">
+            <h1>hey i m heading</h1>
+            <template for:each={userNames} for:item="user">
+                <div class="name" key={user}>{user}</div>
+            </template>
+            <div class="child" lwc:dom="manual"></div>
+        <button onclick={fetchHandler}>fetch details</button>
+        </div>
+    </lightning-card>
+</template>

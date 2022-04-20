@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="get object Info adapter">
+        <div class="slds-var-p-around_medium">
+          <template if:true={objectInfo.data}>
+            <div>default record type:  {objectInfo.data.defaultRecordTypeId}</div>
+            <div>object Api name : {objectInfo.data.apiName}</div> 
+        </template>
+        </div>
+    </lightning-card>
+</template>

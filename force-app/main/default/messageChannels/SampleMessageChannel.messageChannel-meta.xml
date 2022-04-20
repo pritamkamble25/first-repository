@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lightningMessageChannel xmlns="http://scop.sforce.com/2006/04/metadata">
+    <masterLabel>SampleMessageChannel</masterLabel> <!-- this is your file name -->
+    <isExposed>true</isExposed>  <!-- so other can use -->
+    <description>Message channel to pass data</description>
+    <lightningMessageFields>
+        <fieldName>lmsData</fieldName>
+        <description>This is the fiel to pass data</description>
+    </lightningMessageFields>
+    <!-- <lightningMessageFields>
+        <fieldName>2nd field</fieldName>
+        <description>you can create many fields</description>
+    </lightningMessageFields> -->
+</lightningMessageChannel>

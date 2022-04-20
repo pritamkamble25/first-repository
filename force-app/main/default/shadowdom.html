@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>shadow DOM</title>
+        
+    </head>
+    <body>
+        <div>
+            <p>thank for choosing us</p>
+        </div>
+        <div id="host"></div>
+            <button onclick="fetchPtag()">
+                Click me
+
+            </button>
+        <script>
+            const elem = document.querySelector('#host')
+            const shadowroot = elem.attachShadow({mode:'open'})
+            shadowroot.innerHTML = '<p> i m shadowdom DOM</p>'
+
+            function fetchPtag(){
+                let tags = document.querySelectorAll('p')
+                console.log(tags)
+            }
+        </script>
+    </body>
+</html>

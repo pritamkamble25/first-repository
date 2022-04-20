@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="simple event c2p">
+        <div class="slds-var-m-around_medium">
+            <lightning-button
+            variant="based" 
+            label="show modal" 
+            onclick={showhandler}></lightning-button>
+           <p><b>  my name is {msg} and im {age}year old </b></p> 
+            <template if:true={isVisibel}>
+                <c-c2p-simple-event
+                
+               onclose={closehandler}
+                ></c-c2p-simple-event>
+                <!-- event allways start ON 
+                    in child js we dispatchevent event name is close and parent html onclose  -->
+            </template>
+        </div>
+    </lightning-card>
+</template>

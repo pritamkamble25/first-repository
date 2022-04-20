@@ -1,0 +1,42 @@
+<template>
+
+    <!-- one object -->
+<!-- <lightning-card title="getobjectInfo adapter">
+    <div class="slds-var-p-around_medium">
+        <template if:true={objectInfo.data}>
+            <div>default {objectInfo.data.defaultRecordTypeId}</div>
+            <div>object API Name: {objectInfo.data.apiName}</div>
+        </template>
+    </div>
+</lightning-card> -->
+
+<!--                          -->
+
+<!-- more then one objects -->
+
+    <lightning-card title="getObjectInfos adapter">
+        <div class="slds-vsr-p-around_medium">
+            <template if:true={objectInfos}>
+               
+                <table class="slds-table slds-table_call-buffer slds-table_bordered">
+                    <thead>
+                        <tr>
+                            <th>Object Api Name</th>
+                            <th>RecordTypeId</th>
+                        </tr>
+                        
+                    </thead>
+                <tbody>
+                    <template for:each={objectInfos.results} for:item="obj">
+                        <!-- <div></div>  --><tr key={obj.result.apiName}>
+                            <td >{obj.result.apiName}</td>
+                                <td >{obj.result.defaultRecordTypeId}</td>
+                        <!-- </div> --></tr> 
+                    </template>
+                </tbody>
+                </table>
+                gg
+            </template>            
+        </div>
+    </lightning-card>
+</template>

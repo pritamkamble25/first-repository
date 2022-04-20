@@ -1,0 +1,22 @@
+.pk{
+    background-color: #001a28;
+}
+
+.wrapper{
+    width: 100%;
+    background-color: red;
+}
+.user{
+    text-align: right;
+    padding-top:10px;
+    padding-bottom: 10px;
+    color: #001a28;
+}
+.html{
+    width: 90%;
+    background-color: #b0adab;
+}
+.css{
+    width: 50%;
+    background-color: #fe5c4c;
+}

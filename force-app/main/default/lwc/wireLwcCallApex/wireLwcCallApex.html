@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="get account Record List">
+        <div class="slds-p-around_medium">
+            <lightning-combobox
+            name="type"
+            label="Choose your type"
+            value={selectValue}
+            options={typeOptions}
+            onclick={changeType}
+            >
+
+            </lightning-combobox>
+            <template if:true={filterAccounts.data}>
+                <template for:each={filterAccounts.data} for:item="account">
+                    <div class="slds-box slds-box_xx-small" key={account.Id}>
+                        <p><strong>Name : </strong>{accounts.Name}</p>
+                        <p><strong>Type : </strong>{accounts.Type}</p>
+                    </div>
+                   
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

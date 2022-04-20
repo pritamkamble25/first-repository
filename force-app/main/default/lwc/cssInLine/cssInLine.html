@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Inline Styling LWC-cssInLine">
+        <div class="slds-m-around_medium">
+            <div style="color: yellow; font-size:20px;">hello im div tag</div>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="External Styling">
+        <div class="slds-m-around_medium">
+            <p>hey i am a p workin </p>
+            <div class="us">zero to hero is usefull</div>
+            <div class="us">hover .class name: then hover{}</div>
+        </div>
+    </lightning-card> 
+    
+    <!-- <lightning-card title="shadowDom styling">
+        <div class="slds-m-around_medium">
+            <lightning-button title="testing" label="testing" class="btn"></lightning-button>
+        </div>
+        
+    </lightning-card> -->
+
+    <lightning-card title="dynamic google">
+    <div class={className}>
+        Dynamic Style
+    </div>
+    <lightning-input 
+                type="checkbox" 
+                label="Change Style"
+                name="input1"
+                value={changeStyle} 
+                onchange={handleChange}></lightning-input>
+   </lightning-card>
+</template>

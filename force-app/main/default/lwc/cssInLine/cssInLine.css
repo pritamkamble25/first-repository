@@ -1,0 +1,34 @@
+/* in lwc we can apply a style to a elements */
+/* Like h1 div p span */
+/* to call class we use (.) dot notation */
+/* avoid id */
+/* use only elemnet, classes pseudo */
+
+.class1 {
+    height:29px;
+    background: red;
+}
+.class2 {
+    height:29px;
+    background: blue;
+}
+
+.us{
+    color: darkgreen;
+    font-size: 50px;
+}
+/* p{
+    color: darkred;
+} */
+p:hover{
+    padding-left: 55px;
+    color: mediumorchid;
+    border: dotted red 4px;
+    border-color: tomato;
+}
+.us:hover{
+    color: coral;
+    font-size: 100px;
+    padding: 10px;
+    margin: 15px;
+}

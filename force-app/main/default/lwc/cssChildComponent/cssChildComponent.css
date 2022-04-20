@@ -1,0 +1,11 @@
+:host{
+    display: block;
+    background-color: pink;
+    color: purple;
+}
+:host(.violet){   
+/* to call other child component by class name and aply css  */
+display: block;
+background-color: violet;
+color: purple;
+}

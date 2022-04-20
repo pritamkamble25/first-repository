@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="LMS Component A">
+       <div class="slds-var-m-around_medium">
+        <lightning-input
+         type="text" 
+         label="Enter input which you want to share msg"
+         onkeyup={inPutHandler}></lightning-input>
+        </div>
+        <div class="slds-var-m-around_medium">
+         <lightning-button 
+         variant="based" 
+         label="send msg"
+        onclick={publishMessage}></lightning-button>
+    </div>
+
+        <div class="slds-var-m-around_medium">
+        <lightning-button 
+        variant="based" 
+        label="unsubscribe /block" 
+        onclick={unsubcribeHandlerA}></lightning-button>
+    </div>
+    <div class="slds-var-m-around_medium">
+        <lightning-button 
+        variant="based" 
+        label="subscribe /unBlock" 
+        onclick={subcribeHandlerA}></lightning-button>
+    </div>
+    <div class="slds-var-m-around_medium">
+        recived message <strong>{recivedMessageA}</strong> <p></p>
+     </div>
+    </lightning-card>
+</template>

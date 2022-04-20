@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="getpicklist values Industry not for more picklist">
+        <div class="slds-var-p-around_medium">
+            <lightning-combobox
+            name="Industry"
+            label="Industry"
+            value={selectedIndustry}
+            placeholder="Select Progress"
+            options={industryOptions}
+            onchange={handleChange} ></lightning-combobox>
+        </div>
+        <p>selected Industry : {selectedIndustry}</p>
+    </lightning-card>
+                                                            <!-- this method is not good for multiple picklick -->
+    <lightning-card title="getpicklist values type">
+        <div class="slds-var-p-around_medium">
+            <lightning-combobox
+            name="type"
+            label="type"
+            value={selectedType}
+            placeholder="Select Progress"
+            options={typeOptions}
+            onchange={handletypeChange} ></lightning-combobox>
+        </div>
+
+        <lightning-datatable key-field="Id" 
+        data={recordsToDisplay} 
+        columns={columns}
+        hide-checkbox-column
+        onsave={saveHandleAction}
+        draft-values={fldsItemValues}
+        show-row-number-column
+        row-number-offset={rowNumberOffset}>    
+                    
+</lightning-datatable>
+        <p>selected Type : {selectedType}</p>
+    </lightning-card>
+</template>

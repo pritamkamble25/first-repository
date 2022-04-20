@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="carousel parent to child">
+        <div class="slds-var-m-around_medium">
+          
+                    <lightning-carousel disable-auto-scroll>
+                        <template for:each={carouseData} for:item="c">
+                            <lightning-carousel-image 
+                            key={c.header}
+                            src ={c.src}
+                            header ={c.header}
+                            description ={c.description}>
+                        </lightning-carousel-image>
+                        </template>
+                    </lightning-carousel>          
+        </div>
+    </lightning-card>
+</template>

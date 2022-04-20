@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="signin page">
+        <div class="slds-var-m-around_medium">
+             <!-- type should be small letter -->
+           <lightning-input label="Email" type="email"></lightning-input>
+           <lightning-input label="Password" type="password"></lightning-input>
+
+            <lightning-button
+                variant="based"
+                label="back to home"
+                title="back"
+                onclick={clickme}></lightning-button>
+            <lightning-button 
+                variant="success"
+                label="register"
+                title="register"
+                onclick={clicku}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

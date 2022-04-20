@@ -1,0 +1,20 @@
+<template>
+ <lightning-card title="slot named and named">
+     <div class="slds-var-m-around_medium">
+         <c-slot-child>
+          <p class="slds-text-color_success" slot="first">my name is pritam</p>
+          <p class="slds-text-color_error" slot="second">my father name is raju</p>
+           <p slot="footer"> i m footer </p>
+         </c-slot-child>
+     </div>
+ </lightning-card>   
+
+ <lightning-card title="slot named and unnamed">
+    <div class="slds-var-m-around_medium">
+        <c-slot-child>
+         <p >my name is pritam</p>
+         <p>my father name is raju</p>
+         </c-slot-child>
+    </div>
+</lightning-card>   
+</template>

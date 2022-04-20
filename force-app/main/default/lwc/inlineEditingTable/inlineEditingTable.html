@@ -1,0 +1,30 @@
+<template>        
+    <div class="c-container">   
+        <lightning-card  title="Payment Schedule Editor"></lightning-card>        
+        <lightning-accordion allow-multiple-sections-open={multiple}>
+            <div class="slds-m-around_small">
+            <template if:true={deal_terms}>
+                <template for:each={deal_terms} for:item="dt">
+                    <lightning-accordion-section name={dt.Name} label={dt.Name} key={dt.Id}>
+                        <div class="slds-box slds-theme--shade">
+                            <div style="height: 450px;">
+                                <lightning-datatable
+                                    key-field="Id"                
+                                    data={dt.Payment_Schedules__r}                  
+                                    columns={columns}    
+                                    onsave={handleSave}
+                                    draft-values={draftValues}                                   
+                                >
+                                </lightning-datatable>                                     
+                            </div>
+                        </div>    
+                        <template if:true={dt.error}>
+                            <!-- handle Apex error -->
+                        </template>   
+                    </lightning-accordion-section>
+                </template>
+            </template>            
+        </div>
+        </lightning-accordion>         
+    </div>    
+</template>

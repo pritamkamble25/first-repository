@@ -1,0 +1,12 @@
+<template>
+   <div>what is your name</slot></div> 
+    <div><slot></slot></div>      <!-- unnamed slot  slot without class name-->
+   <div><slot  name='first'></slot></div>
+  <div>what is you father name</div>   
+  <div><slot></slot></div>         
+   <div><slot  name='second'></slot></div>  <!--  named slot   slot with class name -->
+
+   <footer class="slds-card__footer slds-hide">
+       <slot name="footer" onslotchange={hidefooter}></slot>
+   </footer>
+</template>
